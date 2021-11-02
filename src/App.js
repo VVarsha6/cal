@@ -1,23 +1,23 @@
-import logo from './logo.svg';
 import './App.css';
+import First from './First';
+import Second from './Second';
+import Operator from './Operator';
+import Result from './Result';
+import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 
 function App() {
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <div className="App">
+           <h1>vvs calc</h1>
+          <Router>
+           <Switch>
+            <Route path="/" exact><First /></Route>
+             <Route path="/Second"><Second /></Route>
+             <Route path="/Operator"><Operator /></Route>
+             <Route path="/Result"><Result /></Route>
+           </Switch>
+     </Router>   
     </div>
   );
 }

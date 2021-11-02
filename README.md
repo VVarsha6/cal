@@ -1,3 +1,9 @@
+Hi there!
+This is my code for a calculator app which works like a form by cruising through various pages for each required value.
+I have used react and its script boilerplates in this code.
+
+-varsha
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
