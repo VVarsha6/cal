@@ -7,16 +7,15 @@ function Result()
         const First = Number(useSelector(state => state.First));
         const Second = Number(useSelector(state => state.Second));
         const Operator = useSelector(state => state.Operator);
-        const [Result,setResult] = useState('');
-         const history = useHistory();
-        
- useEffect(() =>{
-     if(!First)
-     {
-         history.push('/');
-     }
- },[])
+        const [Result,setResult] = useState('');    
+        const history = useHistory();
 
+useEffect(() =>{
+            if(!First)
+            {
+                history.push('/Result');
+            }
+        },[])
 useEffect(() => {       
     switch(Operator)
     {
@@ -33,7 +32,7 @@ useEffect(() => {
             setResult(First/Second)
             break
         default:
-            alert("Invalid operator")
+        history.push('/');
     }
 },[Operator]) 
 return(
