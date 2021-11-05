@@ -1,6 +1,6 @@
 import {first, second, operator} from "./action";
 
-const initialState= { First:" ", Second:" ", Operator:" "}
+const initialState= { First:"", Second:"", Operator:""}
 export default function Reducer(state=initialState, action)
 {
     switch(action.type)

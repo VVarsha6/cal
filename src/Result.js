@@ -11,9 +11,9 @@ function Result()
         const history = useHistory();
 
 useEffect(() =>{
-            if(!First)
+            if(!Operator)
             {
-                history.push('/Result');
+                history.push('/');
             }
         },[])
 useEffect(() => {       

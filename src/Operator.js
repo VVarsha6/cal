@@ -2,12 +2,23 @@ import { useSelector,useDispatch } from "react-redux";
 import "./App.css";
 import {setOperator} from "./redux/action";
 import { useHistory } from "react-router-dom";
+import First from "./First";
+import { useEffect } from "react";
 //import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 
 const Operator = () => {
     let history = useHistory();
     const dispatch= useDispatch();
     const Operator = useSelector(state => state.Operator);
+    const First= useSelector(state => state.First);
+
+    useEffect(() =>{
+        if(history.location.state !==First)
+        {
+            history.push('/');
+        }
+    },[])
+
     function GetOperator(e)
         {
             dispatch(setOperator(e.target.value)) 

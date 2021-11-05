@@ -15,15 +15,15 @@ const First = () => {
         }
     function FButton(e)
         {
-                if(isNaN(First))
+                if(isNaN(First) || First==='')
                 {
                     alert("Kindly enter a number :)");
-                    history.push('/');
+                    //history.push('/');
                 }
                 else
                 {
                     dispatch(setFirst(First));
-                    history.push('/Second');
+                    history.push('/Second',First);
                 }
         }
 
